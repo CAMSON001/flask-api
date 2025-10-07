@@ -54,7 +54,7 @@ def home():
                 padding: 10px 19px;
                 border-radius: 5px;
                 cursor: pointer;
-                margin-top: 10px;
+                margin-top: 11px;
             }
             button:hover {
                 background-color: #0056b3;
