@@ -51,7 +51,7 @@ def home():
                 background-color: #007BFF;
                 color: white;
                 border: none;
-                padding: 10px 20px;
+                padding: 10px 19px;
                 border-radius: 5px;
                 cursor: pointer;
                 margin-top: 10px;
