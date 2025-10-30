@@ -99,6 +99,9 @@ def home():
     </html>
     """
 
+def we_test(x,y):
+    return x+y
+
 # Routes d’API inchangées
 @app.route('/add', methods=['GET'])
 def add():

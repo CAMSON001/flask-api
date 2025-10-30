@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  web:
+    build: .                # utilise le Dockerfile du répertoire courant
+    container_name: flask_app
+    ports:
+      - "5000:5000"         # mappe le port du conteneur vers l’hôte
+    environment:
+      - FLASK_ENV=development   # mode développement (optionnel)
+    volumes:
+      - .:/app              # synchronise ton code local avec le conteneur (utile en dev)
+    restart: unless-stopped # redémarre automatiquement sauf si tu l’arrêtes toi-même
+
+
