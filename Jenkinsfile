@@ -16,8 +16,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    // Install Python dependencies
-		    sh 'apt install python3.12-venv'
+                    // Install Python dependenci
                     sh 'python3 -m venv venv'
                     sh './venv/bin/pip install -r requirements.txt'
                 }
