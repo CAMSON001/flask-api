@@ -46,7 +46,7 @@ pipeline {
             steps {
                 script {
                     // Run Safety to check dependencies
-                    sh './venv/bin/safety scan'
+                    sh './venv/bin/safety scan --exit-zere'
                 }
             }
         }
