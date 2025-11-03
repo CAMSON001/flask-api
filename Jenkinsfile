@@ -18,6 +18,7 @@ pipeline {
                 script {
                     // Install Python dependenci
                     sh 'python3 -m venv venv'
+	            sh 'source venv/bin/activate'
                     sh './venv/bin/pip install -r requirements.txt'
                 }
             }
