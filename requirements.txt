@@ -1,1 +1,5 @@
 flask==3.0.0
+pytest
+bandit
+safety
+trivy
