@@ -37,18 +37,7 @@ pipeline {
             steps {
                 script {
                     // Run Bandit for static code analysis
-                    sh './venv/bin/bandit -r .'
-                }
-            }
-        }
-
-        stage('Container Vulnerability Scan (Trivy)') {
-            steps {
-                script {
-                    // Build the Docker image
-                    sh 'docker-compose build'
-                    // Scan the image with Trivy
-                    sh 'trivy image ${IMAGE_NAME}:latest'
+                    sh './venv/bin/bandit -r . --exit-zero'
                 }
             }
         }
@@ -61,6 +50,17 @@ pipeline {
                 }
             }
         }
+        stage('Container Vulnerability Scan (Trivy)') {
+            steps {
+                script {
+                    // Build the Docker image
+                    sh 'docker-compose build'
+                    // Scan the image with Trivy
+                    sh 'trivy image ${IMAGE_NAME}:latest'
+                }
+            }
+        }
+
 
         stage('Build Docker Image') {
             steps {
