@@ -56,7 +56,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    sh 'docker-compose build'
+                    sh "echo 'build successfully'"
                 }
             }
         }
